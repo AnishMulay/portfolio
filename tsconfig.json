@@ -15,6 +15,7 @@
     }
   },
   "include": [
-    "src/**/*"                                    // Include all files inside `src` folder
+    "src/**/*",                                   // Include all files inside `src` folder
+    "src/global.d.ts"                             // Ensure type declarations are included
   ]
 }

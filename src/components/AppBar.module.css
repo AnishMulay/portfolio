@@ -1,0 +1,30 @@
+.appBar {
+  padding: var(--spacing-medium);
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  margin: 0;
+}
+
+.navList {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  margin: 0;
+}
+
+.navLink {
+  color: var(--text-color);
+  text-decoration: none;
+  font-family: var(--font-family);
+  font-size: 2rem;
+}
+
+.navLink:hover {
+  color: var(--secondary-color);
+  text-decoration: underline;
+}
