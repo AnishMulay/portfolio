@@ -1,15 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import styles from './AppBar.module.css';
 
 const AppBar = () => {
   return (
-    <nav style={{ padding: '10px', backgroundColor: '#333', color: '#fff' }}>
-      <ul style={{ listStyleType: 'none', display: 'flex', justifyContent: 'space-around' }}>
-        <li><Link to="/" style={{ color: '#fff', textDecoration: 'none' }}>Home</Link></li>
-        <li><Link to="/about" style={{ color: '#fff', textDecoration: 'none' }}>About Me</Link></li>
-        <li><Link to="/contact" style={{ color: '#fff', textDecoration: 'none' }}>Contact</Link></li>
-        <li><Link to="/work-experience" style={{ color: '#fff', textDecoration: 'none' }}>Work Experience</Link></li>
-        <li><Link to="/projects" style={{ color: '#fff', textDecoration: 'none' }}>Projects</Link></li>
+    <nav className={styles.appBar}>
+      <ul className={styles.navList}>
+        <li className={styles.navItem}>
+          <Link to="/" className={styles.navLink}>Home</Link>
+        </li>
+        <li className={styles.navItem}>
+          <Link to="/about" className={styles.navLink}>About Me</Link>
+        </li>
+        <li className={styles.navItem}>
+          <Link to="/contact" className={styles.navLink}>Contact</Link>
+        </li>
+        <li className={styles.navItem}>
+          <Link to="/work-experience" className={styles.navLink}>Work Experience</Link>
+        </li>
+        <li className={styles.navItem}>
+          <Link to="/projects" className={styles.navLink}>Projects</Link>
+        </li>
       </ul>
     </nav>
   );
