@@ -1,21 +1,23 @@
 {
   "compilerOptions": {
-    "target": "es5",                              // Set the JavaScript target version
-    "lib": ["dom", "es2015"],                     // Define library files to include in the compilation
-    "jsx": "react",                               // Enable JSX support in TypeScript
-    "moduleResolution": "node",                   // Use Node.js-style resolution for modules
-    "module": "esnext",                           // Specify the module system
-    "esModuleInterop": true,                      // Enable compatibility with CommonJS modules
-    "skipLibCheck": true,                         // Skip type checking of declaration files
-    "forceConsistentCasingInFileNames": true,     // Ensure consistent casing in file imports
-    "strict": true,                               // Enable strict type checking options
-    "baseUrl": "./src",                           // Set the base URL to the `src` folder for relative imports
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [{ "name": "next" }],
     "paths": {
-      "*": ["node_modules/*", "src/*"]            // Include paths for resolving modules
+      "@/*": ["./src/*"]
     }
   },
-  "include": [
-    "src/**/*",                                   // Include all files inside `src` folder
-    "src/global.d.ts"                             // Ensure type declarations are included
-  ]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
 }
