@@ -1,33 +1,25 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { IBM_Plex_Serif, Inter } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import { Sidebar } from "@/components/Sidebar";
+import { Footer } from "@/components/Footer";
 
-const inter = Inter({
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
-
-const ibmPlexSerif = IBM_Plex_Serif({
-  weight: ["400", "500", "600"],
-  subsets: ["latin"],
-  variable: "--font-ibm-plex",
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Anish Mulay - Distributed Systems & OS Engineering",
-  description: "Systems engineer focused on distributed storage and OS internals.",
+  title: "Anish Mulay",
+  description: "Systems engineer. Linux kernel contributor. Building Sandstore.",
+  openGraph: {
+    title: "Anish Mulay",
+    description: "Systems engineer. Linux kernel contributor. Building Sandstore.",
+    url: "https://anishmulay.dev",
+    siteName: "Anish Mulay",
+  },
 };
-
-const navItems = [
-  { label: "About", href: "/" },
-  { label: "Projects", href: "/projects" },
-  { label: "Writing", href: "/writing" },
-  { label: "Research", href: "/research" },
-  { label: "Contact", href: "/contact" },
-] as const;
 
 export default function RootLayout({
   children,
@@ -36,34 +28,33 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.variable} ${ibmPlexSerif.variable} bg-white font-serif text-gray-900 antialiased`}
-      >
-        <div className="min-h-screen bg-white">
-          <div className="mx-auto max-w-[1400px] px-6 py-6 sm:px-8 md:grid md:grid-cols-[12rem_minmax(0,1fr)] md:gap-0 md:px-12 md:py-12 lg:px-20">
-            <aside className="md:sticky md:top-0 md:h-screen md:py-6">
-              <nav aria-label="Primary" className="font-sans">
-                <ul className="flex items-center gap-5 overflow-x-auto whitespace-nowrap pr-2 text-sm md:block md:space-y-3 md:overflow-visible md:pr-0">
-                  {navItems.map((item) => (
-                    <li key={item.href} className="shrink-0">
-                      <Link
-                        href={item.href}
-                        className="text-gray-500 transition-colors hover:text-gray-900"
-                      >
-                        {item.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </nav>
-            </aside>
+      <body className={`${spaceGrotesk.className} antialiased selection:bg-accent selection:text-white`}>
+        {/* Mobile top bar (shown below 768px, hidden above) */}
+        <div className="md:hidden">
+          {/* Note: In a full responsive implementation, the top bar would go here. 
+              The Sidebar client component hides itself on mobile. We'll add the mobile topnav directly inside Sidebar.tsx for sharing state, or here. 
+              Wait, the spec says "Below 768px viewport width: hide the fixed sidebar. Render a simple top navigation bar instead". Let's put it in Sidebar component to keep layout clean. */}
+        </div>
 
-            <main className="min-w-0 pt-10 md:pt-6">
-              <div className="max-w-2xl font-serif leading-relaxed md:pl-20 lg:pl-32">
+        {/* Global Layout */}
+        <div className="flex min-h-screen">
+          <Sidebar />
+
+          <main className="flex-1 md:ml-[380px]">
+            {/* The spec says: Content starts at left offset 340px from viewport edge
+                Sidebar is 260px width. Left margin is 260px.
+                If content starts at 340px, the padding-left or margin-left of the inner container needs to be 340 - 260 = 80px on desktop.
+            */}
+            <div className="md:pl-[80px] pt-[88px] pb-[80px] px-6 md:px-0">
+              <div className="max-w-[600px] w-full mx-auto md:mx-0">
                 {children}
+
+                {/* Footer rendered inside right content area */}
+                <hr className="border-t border-border mt-[80px]" />
+                <Footer />
               </div>
-            </main>
-          </div>
+            </div>
+          </main>
         </div>
       </body>
     </html>
