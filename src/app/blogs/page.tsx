@@ -9,6 +9,9 @@ export const metadata: Metadata = {
 export default function BlogsPage() {
     return (
         <div className="flex flex-col">
+            <h2 className="font-bold text-[2.5rem] leading-none text-[#111827] mb-[16px] mt-0">
+                Blogs
+            </h2>
             {blogs.map((blog, index) => {
                 const isExternal = blog.external;
                 const href = isExternal ? blog.url : `/blogs/${blog.slug}`;

@@ -1,4 +1,6 @@
 import { Metadata } from "next";
+import { origamiModels } from "@/lib/origami";
+import OrigamiCard from "@/components/OrigamiCard";
 
 export const metadata: Metadata = {
     title: "Misc — Anish Mulay",
@@ -7,7 +9,10 @@ export const metadata: Metadata = {
 export default function MiscPage() {
     return (
         <>
-            <p className="mb-[40px] text-[1rem] leading-[1.75] text-foreground">
+            <h2 className="font-bold text-[2.5rem] leading-none text-[#111827] mb-[16px] mt-0">
+                Origami
+            </h2>
+            <p className="mb-[40px] text-[1rem] leading-[1.75] text-[#111827]">
                 I do origami. I&apos;ve been folding paper for years — it&apos;s one of
                 those things that demands complete presence. A single sheet, no cuts, no
                 glue. The precision required and the way a flat plane becomes something
@@ -15,36 +20,10 @@ export default function MiscPage() {
                 coming back to.
             </p>
 
-            <div className="flex flex-row gap-[24px] mt-0">
-                <div className="w-[calc(50%-12px)] aspect-[4/3] bg-code-bg rounded-[8px] flex items-center justify-center relative overflow-hidden">
-                    {/* Replace with actual photo: /public/origami/beetle.jpg */}
-                    <span className="text-muted text-[0.875rem] font-sans relative z-10 font-normal">
-                        Beetle
-                    </span>
-                    {/* Un-comment this Image when you add the file
-          <Image
-            src="/origami/beetle.jpg"
-            alt="Beetle origami"
-            fill
-            className="object-cover z-0"
-          />
-          */}
-                </div>
-
-                <div className="w-[calc(50%-12px)] aspect-[4/3] bg-code-bg rounded-[8px] flex items-center justify-center relative overflow-hidden">
-                    {/* Replace with actual photo: /public/origami/reindeer.jpg */}
-                    <span className="text-muted text-[0.875rem] font-sans relative z-10 font-normal">
-                        Reindeer
-                    </span>
-                    {/* Un-comment this Image when you add the file
-          <Image
-            src="/origami/reindeer.jpg"
-            alt="Reindeer origami"
-            fill
-            className="object-cover z-0"
-          />
-          */}
-                </div>
+            <div className="grid grid-cols-2 gap-[32px] mt-0">
+                {origamiModels.map((model) => (
+                    <OrigamiCard key={model.slug} model={model} />
+                ))}
             </div>
         </>
     );

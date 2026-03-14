@@ -7,6 +7,9 @@ export const metadata: Metadata = {
 export default function ResumePage() {
   return (
     <>
+      <h2 className="font-bold text-[2.5rem] leading-none text-foreground mb-[16px] mt-0">
+        Resume
+      </h2>
       <p className="mb-[40px] text-[1rem] leading-[1.75] text-foreground">
         I&apos;m passionate about building systems that move and scale data
         efficiently. I&apos;m currently pursuing my Master&apos;s in Computer
