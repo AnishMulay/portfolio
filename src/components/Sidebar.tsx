@@ -89,7 +89,7 @@ export function Sidebar() {
                     getInitialsFallback(200, 45, 12)
                 )}
 
-                <h1 className="mt-[48px] text-[var(--font-size-name)] font-bold tracking-[0.08em] uppercase text-foreground">
+                <h1 className="mt-[48px] text-[length:var(--font-size-name)] font-bold tracking-[0.08em] uppercase text-foreground leading-none">
                     ANISH MULAY
                 </h1>
 
@@ -101,7 +101,7 @@ export function Sidebar() {
                             <Link
                                 key={item.href}
                                 href={item.href}
-                                className={`flex items-center text-[var(--font-size-body)] no-underline hover:no-underline transition-colors duration-150 ${active ? "text-accent font-medium" : "text-nav font-normal hover:text-accent"
+                                className={`flex items-center text-[length:var(--font-size-body)] no-underline hover:no-underline transition-colors duration-150 ${active ? "text-accent font-medium" : "text-nav font-normal hover:text-accent"
                                     }`}
                             >
                                 {/* Visual bullet that only shows when active, taking up space to push text right */}

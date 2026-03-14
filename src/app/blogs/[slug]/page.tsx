@@ -49,7 +49,7 @@ export default async function BlogPostPage({ params }: Props) {
     return (
         <div>
             <div className="flex justify-between items-start mb-[40px]">
-                <h1 className="font-bold text-[var(--font-size-post-h1)] text-foreground max-w-[600px] leading-snug">
+                <h1 className="font-bold text-[length:var(--font-size-post-h1)] text-foreground max-w-[600px] leading-snug">
                     {title}
                 </h1>
                 <span className="text-[0.9rem] text-muted whitespace-nowrap ml-4 mt-1">

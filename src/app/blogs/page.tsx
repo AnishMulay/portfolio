@@ -26,7 +26,7 @@ export default function BlogsPage() {
                                 rel="noopener noreferrer"
                                 className="group flex justify-between py-[12px] no-underline hover:no-underline w-full"
                             >
-                                <div className="flex-1 font-semibold text-[var(--font-size-blog-title)] text-foreground group-hover:text-accent transition-colors duration-150 pr-4">
+                                <div className="flex-1 font-semibold text-[length:var(--font-size-blog-title)] text-foreground group-hover:text-accent transition-colors duration-150 pr-4">
                                     {blog.title}
                                 </div>
                                 <div className="whitespace-nowrap font-normal text-[0.9rem] text-muted">
@@ -38,7 +38,7 @@ export default function BlogsPage() {
                                 href={href}
                                 className="group flex justify-between py-[12px] no-underline hover:no-underline w-full"
                             >
-                                <div className="flex-1 font-semibold text-[var(--font-size-blog-title)] text-foreground group-hover:text-accent transition-colors duration-150 pr-4">
+                                <div className="flex-1 font-semibold text-[length:var(--font-size-blog-title)] text-foreground group-hover:text-accent transition-colors duration-150 pr-4">
                                     {blog.title}
                                 </div>
                                 <div className="whitespace-nowrap font-normal text-[0.9rem] text-muted">
