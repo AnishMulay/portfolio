@@ -77,7 +77,7 @@ export function Sidebar() {
             </div>
 
             {/* Desktop Fixed Sidebar (768px and above) */}
-            <aside className="hidden md:flex flex-col fixed top-0 left-[220px] h-screen w-[var(--sidebar-width)] bg-background pt-[21vh] pl-[80px] z-40">
+            <aside className="hidden md:flex flex-col fixed top-0 left-[220px] h-screen w-[var(--sidebar-width)] bg-background pt-[calc(21vh-40px)] pl-[80px] z-40">
                 {!imgError ? (
                     <div className="h-[200px] w-[200px] overflow-hidden rounded-[12px]">
                         <Image
