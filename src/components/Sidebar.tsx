@@ -41,14 +41,16 @@ export function Sidebar() {
             <div className="md:hidden fixed top-0 left-0 right-0 z-50 bg-background border-b border-border py-4 px-6 flex items-center justify-between">
                 <div className="flex items-center gap-3">
                     {!imgError ? (
-                        <Image
-                            src="/profile.png"
-                            alt="Anish Mulay"
-                            width={30}
-                            height={30}
-                            style={{ borderRadius: "50%", objectFit: "cover" }}
-                            onError={() => setImgError(true)}
-                        />
+                        <div className="h-[30px] w-[30px] overflow-hidden rounded-full">
+                            <Image
+                                src="/profile.png"
+                                alt="Anish Mulay"
+                                width={30}
+                                height={30}
+                                className="h-full w-full scale-[1.3] object-cover object-center"
+                                onError={() => setImgError(true)}
+                            />
+                        </div>
                     ) : (
                         getInitialsFallback(30, 13, 12) /* Using 50% radius equivalent for circle in mobile? spec says photo 24px circle */
                     )}
@@ -75,16 +77,18 @@ export function Sidebar() {
             </div>
 
             {/* Desktop Fixed Sidebar (768px and above) */}
-            <aside className="hidden md:flex flex-col fixed top-0 left-[280px] h-screen w-[var(--sidebar-width)] bg-background pt-[21vh] pl-[80px] z-40">
+            <aside className="hidden md:flex flex-col fixed top-0 left-[220px] h-screen w-[var(--sidebar-width)] bg-background pt-[21vh] pl-[80px] z-40">
                 {!imgError ? (
-                    <Image
-                        src="/profile.png"
-                        alt="Anish Mulay"
-                        width={200}
-                        height={200}
-                        style={{ borderRadius: "12px", objectFit: "cover" }}
-                        onError={() => setImgError(true)}
-                    />
+                    <div className="h-[200px] w-[200px] overflow-hidden rounded-[12px]">
+                        <Image
+                            src="/profile.png"
+                            alt="Anish Mulay"
+                            width={200}
+                            height={200}
+                            className="h-full w-full scale-[1.3] object-cover object-center"
+                            onError={() => setImgError(true)}
+                        />
+                    </div>
                 ) : (
                     getInitialsFallback(200, 45, 12)
                 )}

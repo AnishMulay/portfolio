@@ -45,12 +45,12 @@ export default function RootLayout({
                 Sidebar is 260px width. Left margin is 260px.
                 If content starts at 340px, the padding-left or margin-left of the inner container needs to be 340 - 260 = 80px on desktop.
             */}
-            <div className="md:pl-[80px] pt-[88px] pb-[80px] px-6 md:px-0">
+            <div className="md:pl-[80px] pt-[88px] pb-[20px] px-6 md:px-0">
               <div className="max-w-[600px] w-full mx-auto md:mx-0">
                 {children}
 
                 {/* Footer rendered inside right content area */}
-                <hr className="border-t border-border mt-[80px]" />
+                <hr className="border-t border-border mt-[40px]" />
                 <Footer />
               </div>
             </div>
