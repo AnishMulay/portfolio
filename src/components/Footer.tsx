@@ -13,16 +13,16 @@ export function Footer() {
                     className="text-muted hover:text-accent transition-colors duration-150 no-underline hover:no-underline"
                     aria-label="Email"
                 >
-                    <Mail size={18} />
+                    <Mail size={20} />
                 </a>
                 <a
                     href="https://github.com/AnishMulay"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-muted hover:text-accent transition-colors duration-150 no-underline hover:no-underline"
-                    aria-label="Github"
+                    aria-label="GitHub"
                 >
-                    <Github size={18} />
+                    <Github size={20} />
                 </a>
                 <a
                     href="https://www.linkedin.com/in/anish-mulay/"
@@ -31,7 +31,7 @@ export function Footer() {
                     className="text-muted hover:text-accent transition-colors duration-150 no-underline hover:no-underline"
                     aria-label="LinkedIn"
                 >
-                    <Linkedin size={18} />
+                    <Linkedin size={22} />
                 </a>
             </div>
         </footer>
