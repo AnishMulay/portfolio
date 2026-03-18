@@ -125,3 +125,43 @@ ul {
 li {
   margin-bottom: 8px;
 }
+
+@media (max-width: 768px) {
+  /* Scale down body text slightly */
+  body {
+    font-size: 15px;
+    padding-left: 0 !important;
+  }
+
+  /* Blog list titles should not wrap awkwardly */
+  .blog-row-title {
+    font-size: 0.9375rem;
+    line-height: 1.5;
+  }
+
+  /* Blog page heading */
+  h1.page-title {
+    font-size: 1.5rem;
+  }
+
+  /* Origami and blog post titles */
+  h1 {
+    font-size: 1.375rem;
+  }
+
+  /* Tighten paragraph line length on mobile */
+  p {
+    line-height: 1.65;
+  }
+
+  /* Blog list rows — allow date to wrap below title on very small screens */
+  .blog-list-row {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .blog-list-date {
+    width: 100%;
+    text-align: left;
+  }
+}

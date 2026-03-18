@@ -58,14 +58,14 @@ export function Sidebar() {
                     </span>
                 </div>
 
-                <nav className="flex items-center gap-4">
+                <nav className="flex items-center gap-[20px]">
                     {NAV_ITEMS.map((item) => {
                         const active = isActive(item.href);
                         return (
                             <Link
                                 key={item.href}
                                 href={item.href}
-                                className={`text-[0.875rem] no-underline hover:no-underline ${active ? "text-accent font-medium" : "text-nav font-normal"
+                                className={`text-[0.9375rem] no-underline hover:no-underline ${active ? "text-accent font-medium" : "text-nav font-normal"
                                     } hover:text-accent transition-colors duration-150`}
                             >
                                 {item.label}
