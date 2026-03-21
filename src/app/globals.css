@@ -11,7 +11,7 @@
   --color-text-nav: #4B5563;
   /* inactive nav items */
   --color-accent: #1746A2;
-  /* blue — ALL links, active nav dot, hover states */
+  /* blue: ALL links, active nav dot, hover states */
   --color-accent-hover: #123b8a;
   /* slightly darker blue on hover */
   --color-border: #E5E7EB;
@@ -19,14 +19,14 @@
   --color-code-bg: #F3F4F6;
   /* inline code background */
   --color-code-text: #BE185D;
-  /* inline code text — pink/rose */
+  /* inline code text: pink/rose */
 
   --font-size-name: 3.5rem;
   /* "ANISH MULAY" in sidebar */
   --font-size-body: 1rem;
-  /* 16px — all body text */
+  /* 16px: all body text */
   --font-size-blog-title: 1rem;
-  /* blog list titles — same as body, bold */
+  /* blog list titles: same as body, bold */
   --font-size-post-h1: 1.25rem;
   /* blog post page title */
   --font-size-post-h2: 1.125rem;
@@ -154,7 +154,7 @@ li {
     line-height: 1.65;
   }
 
-  /* Blog list rows — allow date to wrap below title on very small screens */
+  /* Blog list rows: allow date to wrap below title on very small screens */
   .blog-list-row {
     flex-wrap: wrap;
     gap: 4px;

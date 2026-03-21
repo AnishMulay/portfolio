@@ -3,7 +3,7 @@ import { origamiModels } from "@/lib/origami";
 import OrigamiCard from "@/components/OrigamiCard";
 
 export const metadata: Metadata = {
-    title: "Misc — Anish Mulay",
+    title: "Misc | Anish Mulay",
 };
 
 export default function MiscPage() {
@@ -13,7 +13,7 @@ export default function MiscPage() {
                 Origami
             </h2>
             <p className="mb-[40px] text-[1rem] leading-[1.75] text-[#111827]">
-                I do origami. I&apos;ve been folding paper for years — it&apos;s one of
+                I do origami. I&apos;ve been folding paper for years; it&apos;s one of
                 those things that demands complete presence. A single sheet, no cuts, no
                 glue. The precision required and the way a flat plane becomes something
                 three-dimensional through nothing but careful folds is something I keep

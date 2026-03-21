@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Blogs — Anish Mulay",
+    title: "Blogs | Anish Mulay",
 };
 
 export default function BlogsPage() {

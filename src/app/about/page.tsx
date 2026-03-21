@@ -12,8 +12,8 @@ export default function AboutPage() {
 
         <p className="font-serif text-base leading-relaxed text-gray-900 sm:text-lg">
           Systems engineer focused on distributed systems, operating systems,
-          and GPU-scale computing. I build systems to understand how they work
-          — from distributed file systems and Linux kernel patches to
+          and GPU-scale computing. I build systems to understand how they work,
+          from distributed file systems and Linux kernel patches to
           GPU-accelerated optimal transport research.
         </p>
       </section>

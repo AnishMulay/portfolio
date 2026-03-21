@@ -11,7 +11,7 @@ type Props = {
 export async function generateMetadata({ params }: Props) {
     const { slug } = await params;
     return {
-        title: `Post — Anish Mulay`,
+        title: `Post | Anish Mulay`,
     };
 }
 

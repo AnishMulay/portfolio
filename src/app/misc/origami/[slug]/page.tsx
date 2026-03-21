@@ -13,7 +13,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     if (!model) return {};
 
     return {
-        title: `${model.name} — Anish Mulay`,
+        title: `${model.name} | Anish Mulay`,
     };
 }
 

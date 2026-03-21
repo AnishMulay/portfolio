@@ -19,20 +19,20 @@ export const origamiModels: OrigamiModel[] = [
         attribution: 'Design by Joseph Hwang, from Marine Origami (2023). Folded from a single 20×20 cm black sheet.',
         coverPhoto: {
             src: '/origami/orca/photo-3.jpg',
-            alt: 'Orca origami model — front view',
+            alt: 'Orca origami model, front view',
         },
         photos: [
             {
                 src: '/origami/orca/photo-1.jpg',
-                alt: 'Orca origami model — lead photo',
+                alt: 'Orca origami model, lead photo',
             },
             {
                 src: '/origami/orca/photo-2.jpg',
-                alt: 'Orca origami model — detail view',
+                alt: 'Orca origami model, detail view',
             },
             {
                 src: '/origami/orca/photo-3.jpg',
-                alt: 'Orca origami model — front view',
+                alt: 'Orca origami model, front view',
             },
         ],
         paragraphs: [
